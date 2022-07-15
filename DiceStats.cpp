@@ -1,21 +1,33 @@
 #include <iostream>
+#include <cstdlib>
+#include <string>
+using namespace std;
+
+// Role Die Function
+int RoleDie(int dSides)
+{
+    //Calculate Role Value
+    int roleValue = (rand() % dSides) + 1;
+
+    return roleValue;
+}
 
 int main()
 {
-    int dice_count{ 20 };
-    int cup_count{ 40 };
+    //Not Sure What Exactly this Does Yet
+    srand((unsigned)time(0));
 
-    std::cout << "The number of dice is " << dice_count << std::endl;
-    std::cout << "The number of cups are " << cup_count << std::endl;
+    //Var for Input Number from User
+    int inputNumber;
 
-    std::cout << "The positive range for type double is from "
-        << std::numeric_limits<double>::min() << " to "
-        << std::numeric_limits<double>::max() << std::endl;
+    //Prompt User for Number of Sides
+    cout << "Enter the number of sides for the die: ";
 
+    //Store User Input Value
+    cin >> inputNumber;
 
-    for (int i = 0; i < 10; ++i)
-    {
-        std::cout << "Currently, variable i is " << i << std::endl;
-    }
+    //Roll Die and Display Message Back to User
+    cout << "You rolled a " << RoleDie(inputNumber) << endl;
 
+    return 0;
 }
