@@ -14,7 +14,8 @@ int RoleDie(int dSides)
 
 int main()
 {
-    //Not Sure What Exactly this Does Yet
+
+    //Seed for Random
     srand((unsigned)time(0));
 
     //Var for Input Number from User
@@ -27,6 +28,15 @@ int main()
     cin >> inputNumber;
 
     //Roll Die and Display Message Back to User
+    cout << "You rolled a " << RoleDie(inputNumber) << endl;
+
+    //Prompt User for Another Roll
+    cout << "Please enter another number of sides for a die roll: ";
+
+    //Store User Input Value
+    cin >> inputNumber;
+
+    //Roll Second Die and Display Value
     cout << "You rolled a " << RoleDie(inputNumber) << endl;
 
     return 0;
